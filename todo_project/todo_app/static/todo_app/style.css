@@ -1,0 +1,32 @@
+/* In todo_app/static/todo_app/style.css */
+
+.todo-form {
+    margin-bottom: 20px;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.todo-title {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.todo-complete {
+    margin-right: 10px;
+}
+
+.todo-delete {
+    margin-left: auto;
+}

@@ -1,0 +1,22 @@
+<!-- In todo_app/templates/todo_app/index.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>To-Do List</h2>
+<form method="post" class="todo-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Add Task</button>
+</form>
+<ul class="todo-list">
+    {% for task in tasks %}
+    <li class="todo-item">
+        <span class="todo-title">{{ task.title }}</span>
+        <span class="todo-description">{{ task.description }}</span>
+        <button class="btn btn-success todo-complete">Complete</button>
+        <button class="btn btn-danger todo-delete">Delete</button>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
